@@ -61,6 +61,10 @@ Call this skill after `gh release create` (or equivalent) has completed and arti
 
 Do not call this skill before artifacts are published. Homebrew will reject a formula whose URLs resolve to 404 or whose checksums do not match the downloaded content.
 
+## Files
+
+- [`prompts/homebrew-formula-updater.md`](prompts/homebrew-formula-updater.md): The `/homebrew-formula-updater` Claude Code skill (copy to `~/.claude/commands/homebrew-formula-updater.md`)
+
 ## License
 
 [MIT](LICENSE)
