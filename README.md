@@ -1,6 +1,7 @@
 # homebrew-formula-updater
 
 [![Blackwell Systems™](https://raw.githubusercontent.com/blackwell-systems/blackwell-docs-theme/main/badge-trademark.svg)](https://github.com/blackwell-systems)
+[![Version](https://img.shields.io/github/v/release/blackwell-systems/homebrew-formula-updater)](https://github.com/blackwell-systems/homebrew-formula-updater/releases/latest)
 
 A Claude Code skill for automating Homebrew tap formula updates as part of a release process. Given a version and per-platform SHA256 checksums, it locates the formula in the tap repository, updates the version string and all hashes, commits the change with a conventional message, and pushes.
 
