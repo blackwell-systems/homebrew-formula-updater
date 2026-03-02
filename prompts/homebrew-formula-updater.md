@@ -1,4 +1,4 @@
-<!-- homebrew-formula-updater v0.1.0 -->
+<!-- homebrew-formula-updater v0.1.1 -->
 Homebrew Formula Updater
 
 You are updating a Homebrew tap formula to point to a new release. Work through the steps below in order. Each step gates the next.
@@ -148,7 +148,7 @@ git commit -m "<name> <version-without-v>"
 git push origin main
 ```
 
-The commit message format matches the tap's existing convention (e.g. `claudewatch 1.2.0`, not `feat: bump claudewatch to v1.2.0`). Infer the format from recent commits in the tap: `git log --oneline -5`.
+The commit message format is `<name> <version-without-v>` — plain name and version, no prefix, no `v`. Example: `claudewatch 1.2.0`. This is the standard Homebrew tap convention. Do not use `chore:`, `feat:`, or any other prefix.
 
 If push fails due to branch protection (bypass warning), that is expected — proceed.
 

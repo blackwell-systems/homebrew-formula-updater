@@ -4,6 +4,12 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
+## [v0.1.1] - 2026-03-02
+
+### Fixed
+
+- **Commit message format no longer inferred from git log** — the previous approach used `git log --oneline -5` to infer the tap's commit convention, which is unreliable if recent commits were made by automated tooling with non-standard prefixes. The format is now hardcoded to the standard Homebrew tap convention: `<name> <version-without-v>` (e.g. `claudewatch 1.2.0`), with no `chore:`, `feat:`, or other prefix.
+
 ## [v0.1.0] - 2026-03-01
 
 ### Added
