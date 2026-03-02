@@ -4,6 +4,12 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
+## [v0.1.2] - 2026-03-02
+
+### Fixed
+
+- **Default branch no longer hardcoded to `main`** — Step 7 now resolves the push target via `git symbolic-ref refs/remotes/origin/HEAD`, falling back to `main` only if the command fails or returns empty. Makes the skill correct for repos using `master` or any other default branch name.
+
 ## [v0.1.1] - 2026-03-02
 
 ### Fixed

@@ -1,4 +1,4 @@
-<!-- homebrew-formula-updater v0.1.1 -->
+<!-- homebrew-formula-updater v0.1.2 -->
 Homebrew Formula Updater
 
 You are updating a Homebrew tap formula to point to a new release. Work through the steps below in order. Each step gates the next.
@@ -142,10 +142,18 @@ Ask the user to confirm the diff before committing. If anything looks wrong, ask
 
 ## Step 7 — Commit and push
 
+Determine the default branch dynamically:
+
+```bash
+git symbolic-ref refs/remotes/origin/HEAD | sed 's|refs/remotes/origin/||'
+```
+
+If the command fails or returns empty, fall back to `main`.
+
 ```bash
 git add Formula/<name>.rb
 git commit -m "<name> <version-without-v>"
-git push origin main
+git push origin <default-branch>
 ```
 
 The commit message format is `<name> <version-without-v>` — plain name and version, no prefix, no `v`. Example: `claudewatch 1.2.0`. This is the standard Homebrew tap convention. Do not use `chore:`, `feat:`, or any other prefix.
